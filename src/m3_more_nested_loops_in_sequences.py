@@ -160,7 +160,6 @@ def largest_negative_number(seq_seq):
                     largest_number = seq_seq[j][k]
     return largest_number
 
-
 def run_test_first_is_elsewhere_too():
     """ Tests the    first_is_elsewhere_too    function. """
     # -------------------------------------------------------------------------

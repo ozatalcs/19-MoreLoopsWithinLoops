@@ -249,7 +249,7 @@ def numbers_constant_forward(r, maxnum, n):
     for j in range(r):
         for k in range(maxnum):
             print(str(k+1)*n, end='')
-            print(' ', end ='')
+            print(' ', end='')
         print()
 
 
@@ -285,7 +285,7 @@ def numbers_constant_backwards(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # Done: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -293,7 +293,11 @@ def numbers_constant_backwards(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-    
+    for j in range(r):
+        for k in range(maxnum):
+            print(str(maxnum-k)*n, end='')
+            print(' ', end='')
+        print()
 
 def run_test_numbers_increasing_forward():
     """ Tests the    numbers_increasing_forward    function. """
@@ -337,7 +341,7 @@ def numbers_increasing_forward(r, maxnum):
     Preconditions:  r and maxnum are positive integers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # Done: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -345,6 +349,11 @@ def numbers_increasing_forward(r, maxnum):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
+    for j in range(r):
+        for k in range(maxnum):
+            print(str(k+1)*(k+1), end='')
+            print(' ', end='')
+        print()
 
 
 # -----------------------------------------------------------------------------

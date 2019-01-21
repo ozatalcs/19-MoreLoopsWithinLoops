@@ -236,7 +236,7 @@ def numbers_constant_forward(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: What loop structure do you need for this problem?
@@ -246,6 +246,11 @@ def numbers_constant_forward(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
+    for j in range(r):
+        for k in range(maxnum):
+            print(str(k+1)*n, end='')
+            print(' ', end ='')
+        print()
 
 
 def run_test_numbers_constant_backwards():
@@ -288,7 +293,7 @@ def numbers_constant_backwards(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-
+    
 
 def run_test_numbers_increasing_forward():
     """ Tests the    numbers_increasing_forward    function. """

@@ -103,7 +103,20 @@ def run_test_largest_negative_number():
     print('-------------------------------------------------')
     print('Testing the   LARGEST_NEGATIVE_NUMBER   function:')
     print('-------------------------------------------------')
+    # Test 1:
+    expected = -5
+    answer = largest_number(([-3, -5, -1], [12, 3, 4, 6], []))
+    print('Expected and actual are:', expected, answer)
 
+    # Test 2:
+    expected = None
+    answer = largest_number(([], [], []))
+    print('Expected and actual are:', expected, answer)
+
+    # Test 3:
+    expected = -3
+    answer = largest_number(([-3,4,-15,234,-74,25,84,13], [234,-1345,53,13], [12,-13,34,15]))
+    print('Expected and actual are:', expected, answer)
 
 def largest_negative_number(seq_seq):
     """
@@ -135,6 +148,17 @@ def largest_negative_number(seq_seq):
     #   being constructed (so the SPACE allowed is limited to the
     #   give sequence of sequences plus any non-list variables you want).
     # -------------------------------------------------------------------------
+    largest_number = None
+    for j in range(len(seq_seq)):
+        for k in range(len(seq_seq[j])):
+            if largest_number != None:
+                if seq_seq[j][k] < 0:
+                    if seq_seq[j][k] > largest_number:
+                        largest_number = seq_seq[j][k]
+            if largest_number is None:
+                if seq_seq[j][k] < 0:
+                    largest_number = seq_seq[j][k]
+    return largest_number
 
 
 def run_test_first_is_elsewhere_too():
